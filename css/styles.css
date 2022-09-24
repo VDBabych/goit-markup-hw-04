@@ -114,11 +114,36 @@ img {
     color: var(--accent-color);
 }
 
+.mail-icon,
+.tel-icon {
+    fill: currentColor;
+}
+
+.mail-icon {
+    width: 16px;
+    height: 12px;
+    display: inline-block;
+}
+
+.mail-link:hover .mail-icon,
+.tel-link:hover .tel-icon,
+.mail-link:focus .mail-icon,
+.tel-link:focus .tel-icon {
+    fill: currentColor;
+}
+
+.contacts-item span{
+    display: block;
+}
+
 .contacts .contacts-item:not(:last-child) {
     margin-right: 50px;
 }
 
 .contacts .link{
+    display: flex;
+    gap: 10px;
+    align-items: center;
     color: var(--main-text-color);
 
     font-weight: 500;
@@ -133,11 +158,18 @@ img {
 }
 
 .hero-section {
+    max-width: 1600px;
+    height: 600px;
+    margin-left: auto;
+    margin-right: auto;
+    background-image: linear-gradient(rgba(47, 48, 58, 0.4), rgba(47, 48, 58, 0.4)),
+    url("../images/hero-background-image.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
     padding-top: 200px;
     padding-bottom: 200px;
     text-align: center;
-
-    background-color: var(--secondary-bg-color);
 }
 
 .hero {
@@ -194,6 +226,17 @@ img {
     font-size: 14px;
 }
 
+.icon-wrapper{
+    padding: 25px 100px;
+    background-color: #F5F4FA;
+    margin-bottom: 30px;
+    border-radius: 4px;
+}
+
+.item-icon{
+    display: block;
+}
+
 .section-title {
     color: var(--title-text-color);
 
@@ -231,6 +274,8 @@ img {
     padding-top: 30px;
     padding-bottom: 30px;
     background-color: var(--primary-white-color);
+    border: 1px transparent;
+    border-radius: 0px 0px 4px 4px;
 }
 
 .team-card .card-title {
@@ -242,11 +287,82 @@ img {
     text-align: center;
 }
 
+.team-card {
+    box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 2px 1px rgba(0, 0, 0, 0.2);
+    border: 1px transparent;
+    border-radius: 0px 0px 4px 4px;
+}
+
 .team-card .card-text {
     margin-top: 10px;
 
     line-height: 1.18;
     text-align: center;
+}
+
+.social-list {
+    margin-top: 16px;
+    display: flex;
+    gap: 10px;
+    justify-content: center;
+}
+
+.social-list-item {
+    width: 44px;
+    height: 44px;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.social-icon {
+    fill: #AFB1B8;
+    width: 20px;
+    height: 20px;
+}
+
+.social-list-item:hover .social-icon,
+.social-list-item:focus .social-icon {
+    fill: var(--primary-white-color)
+}
+
+.social-list-item:hover,
+.social-list-item:focus {
+    background-color: var(--accent-color);
+}
+
+.client-section .section-title {
+    margin-bottom: 50px;
+}
+
+.client-list {
+    display: flex;
+    gap: 30px;
+}
+
+.client-item {
+    width: 170px;
+    height: 92px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    border: 1px solid #AFB1B8;
+    border-radius: 4px;
+}
+
+.client-icon {
+    fill: #AFB1B8;
+}
+
+.client-item:hover .client-icon,
+.client-item:focus .client-icon {
+    fill: var(--accent-color);
+}
+
+.client-item:hover {
+    border-color: #2196F3;
 }
 
 .page-footer {
@@ -281,6 +397,40 @@ img {
 
     font-size: 14px;
     line-height: 1.71;    
+}
+
+.social-block-text {
+    margin-bottom: 20px;
+    font-family: 'Roboto';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 14px;
+    line-height: 16px;
+    letter-spacing: 0.03em;
+    text-transform: uppercase;
+    
+    color: #FFFFFF;
+}
+
+.page-footer .container {
+    display: flex;
+    align-items: baseline;
+}
+
+.footer-social-block {
+    margin-left: 70px;
+}
+
+.footer-social-block .social-list-item {
+    background-color: #43444D;
+}
+
+.footer-social-block .social-list-item:hover {
+    background-color: var(--accent-color);
+}
+
+.footer-social-block .social-icon {
+    fill: var(--primary-white-color);
 }
 
 /* тимчасове рішення */
@@ -334,6 +484,20 @@ img {
     line-height: 1.88;
 }
 
+.work-card .link {
+    display: block;
+    width: 100%;
+    height: 100%;
+}
+
+.work-card .link:hover,
+.work-card .link:focus {
+    box-shadow: 
+    0px 1px 1px rgba(0, 0, 0, 0.12), 
+    0px 4px 4px rgba(0, 0, 0, 0.06), 
+    1px 4px 6px rgba(0, 0, 0, 0.16);
+}
+
 .btn-list li:not(:last-child) {
     margin-right: 8px;
 }
@@ -357,4 +521,8 @@ img {
 .btn-list .btn:focus {
     background-color: var(--accent-color);
     color: var(--primary-white-color);
+    box-shadow: 
+    0px 3px 1px rgba(0, 0, 0, 0.1), 
+    0px 1px 2px rgba(0, 0, 0, 0.08), 
+    0px 2px 2px rgba(0, 0, 0, 0.12);
 }
